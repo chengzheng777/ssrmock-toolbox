@@ -1,6 +1,5 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
@@ -15,10 +14,21 @@
 			}
 		},
 		onLoad() {
-
+			this.getPhoneInfo();
 		},
 		methods: {
+			// 获取设备信息
+			getPhoneInfo() {
+				uni.getSystemInfo({
+					success: (res) => {
+						console.log('获取设备信息>>>', res)
+					},
+					fail: (error) => {
+						console.log('获取设备信息失败>>>', error)
+					}
+				});
 
+			}
 		}
 	}
 </script>
