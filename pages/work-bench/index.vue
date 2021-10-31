@@ -13,22 +13,9 @@
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-			this.getPhoneInfo();
+		onLoad() { 
 		},
-		methods: {
-			// 获取设备信息
-			getPhoneInfo() {
-				uni.getSystemInfo({
-					success: (res) => {
-						console.log('获取设备信息>>>', res)
-					},
-					fail: (error) => {
-						console.log('获取设备信息失败>>>', error)
-					}
-				});
-
-			}
+		methods: { 
 		}
 	}
 </script>
